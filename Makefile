@@ -19,8 +19,6 @@
 #
 #-------------------------------------------------------------------------
 
-TARGETS=
-
 all:
 	(cd lef; make)
 	(cd def; make)
@@ -34,5 +32,3 @@ install:
 	@(cd def/include; for i in *; do $(INST) $$i $(ACT_HOME)/include/def/$$i; done)
 	@(cd lef/lib; for i in *; do $(INST) $$i $(ACT_HOME)/lib/$$i; done)
 	@(cd def/lib; for i in *; do $(INST) $$i $(ACT_HOME)/lib/$$i; done)
-
-include $(ACT_HOME)/scripts/Makefile.std
